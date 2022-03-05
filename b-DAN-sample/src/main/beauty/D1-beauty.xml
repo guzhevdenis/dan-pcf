@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  Archive Configuration
+  Root: EngineConfig
+  CODAC-VERSION: 6.3.1
+  WARNING: This is an automatically generated file. PLEASE DO NOT MODIFY.
+-->
+
+ <engineconfig >
+     <group >
+         <name >D1-FCT0-SYSM</name>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-BTIME</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-CCSV</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-CORE-DBDLC</name>
+
+             <period >10.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-CORE-DBRECC</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-CORE-STTOD</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-CPUUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-DISKUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-EPICSV</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-HOSTNAME</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-MEMUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-NRBPS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-NSBPS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-SHLT</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-SYSHLTS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-SYSM-DBDLC</name>
+
+             <period >10.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-SYSM-DBRECC</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-SYSM-STTOD</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-TDEVICE</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-TOFFSET</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PCFDANPCF-TSTATUS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-BTIME</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-CCSV</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-CORE-DBDLC</name>
+
+             <period >10.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-CORE-DBRECC</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-CORE-STTOD</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-CPUUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-DISKUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-EPICSV</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-HOSTNAME</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-MEMUTL</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-NRBPS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-NSBPS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-SHLT</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-SYSHLTS</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-SYSM-DBDLC</name>
+
+             <period >10.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-SYSM-DBRECC</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+
+         <channel >
+             <name >D1-FCT0-SYSM--:PSHDANPSH-SYSM-STTOD</name>
+
+             <period >1.0</period>
+
+             <monitor >0.0</monitor>
+</channel>
+</group>
+</engineconfig>

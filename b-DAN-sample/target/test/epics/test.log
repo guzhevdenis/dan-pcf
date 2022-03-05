@@ -1,0 +1,99 @@
+===================================================================
+[1m STARTING AUTOMATED TESTS[0m
+===================================================================
+ Time: Thu Oct 21 13:02:55 UTC 2021
+ File: /home/codac-dev/SDD-project/b-DAN-sample/target/test/epics/test.sh
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+[1;34m Testing 'mvn iter:run -Ddaemon=true -v'...[0m
+-------------------------------------------------------------------
+
+mvn iter:run -Ddaemon=true -v
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-iter-plugin:6.3.0:run (default-cli) @ standalone-pom ---
+[WARN] Failed to find any program matching '*'!
+Starting project IOC 'D1-FCT0-PCF0CORE'...                 [FAILED]
+[ERROR] realpath: ‘../../bin/linux-x86_64/D1-FCT0’: No such file or directory
+[ERROR] Failed to find IOC executable ''!
+Starting project IOC 'D1-FCT0-PCF0SYSM'...                 [FAILED]
+[ERROR] realpath: ‘../../bin/linux-x86_64/D1-FCT0’: No such file or directory
+[ERROR] Failed to find IOC executable ''!
+Starting project IOC 'D1-FCT0-PSH0CORE'...                 [FAILED]
+[ERROR] realpath: ‘../../bin/linux-x86_64/D1-FCT0’: No such file or directory
+[ERROR] Failed to find IOC executable ''!
+Starting project IOC 'D1-FCT0-PSH0SYSM'...                 [FAILED]
+[ERROR] realpath: ‘../../bin/linux-x86_64/D1-FCT0’: No such file or directory
+[ERROR] Failed to find IOC executable ''!
+[ERROR] Failed to start 4 out of 4 IOCs (D1-FCT0-PCF0CORE, D1-FCT0-PCF0SYSM, D1-FCT0-PSH0CORE, D1-FCT0-PSH0SYSM)!
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.759 s
+[INFO] Finished at: 2021-10-21T13:02:59Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-iter-plugin:6.3.0:run (default-cli) on project standalone-pom: Failed to start 4 out of 4 IOCs (D1-FCT0-PCF0CORE, D1-FCT0-PCF0SYSM, D1-FCT0-PSH0CORE, D1-FCT0-PSH0SYSM)! -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+Test 'mvn iter:run -Ddaemon=true -v'[60G[[1;31mFAILED[0m]
+
+-------------------------------------------------------------------
+[1;34m Testing 'mvn iter:stop -v'...[0m
+-------------------------------------------------------------------
+
+mvn iter:stop -v
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-iter-plugin:6.3.0:stop (default-cli) @ standalone-pom ---
+[WARN] Failed to find any program matching '*'!
+Stopping project IOC 'D1-FCT0-PCF0CORE'...                 [FAILED]
+[ERROR] EPICS IOC 'D1-FCT0-PCF0CORE' is already stopped!
+Stopping project IOC 'D1-FCT0-PCF0SYSM'...                 [FAILED]
+[ERROR] EPICS IOC 'D1-FCT0-PCF0SYSM' is already stopped!
+Stopping project IOC 'D1-FCT0-PSH0CORE'...                 [FAILED]
+[ERROR] EPICS IOC 'D1-FCT0-PSH0CORE' is already stopped!
+Stopping project IOC 'D1-FCT0-PSH0SYSM'...                 [FAILED]
+[ERROR] EPICS IOC 'D1-FCT0-PSH0SYSM' is already stopped!
+[ERROR] Failed to stop 4 out of 4 IOCs (D1-FCT0-PCF0CORE, D1-FCT0-PCF0SYSM, D1-FCT0-PSH0CORE, D1-FCT0-PSH0SYSM)!
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.954 s
+[INFO] Finished at: 2021-10-21T13:03:03Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-iter-plugin:6.3.0:stop (default-cli) on project standalone-pom: Failed to stop 4 out of 4 IOCs (D1-FCT0-PCF0CORE, D1-FCT0-PCF0SYSM, D1-FCT0-PSH0CORE, D1-FCT0-PSH0SYSM)! -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+Test 'mvn iter:stop -v'[60G[[1;31mFAILED[0m]
+
+-------------------------------------------------------------------
+ [1;31mAUTOMATIC TESTS FAILED[0m
+-------------------------------------------------------------------
+[1m TEST SUMMARY[0m
+-------------------------------------------------------------------
+ Tests ok: 0/2
+ Tests failed: 2/2
+===================================================================
+
+

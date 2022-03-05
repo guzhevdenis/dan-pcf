@@ -1,0 +1,10 @@
+===================================================================
+ Starting automated tests of DAN-sample
+===================================================================
+Testing 'mvn iter:run -Ddaemon=true -v'.[60G[[1;31mFAILED[0m]
+Testing 'mvn iter:stop -v'.[60G[[1;31mFAILED[0m]
+[1;31m===================================================================
+ AUTOMATIC TESTS FAILED
+ Log file: /home/codac-dev/SDD-project/b-DAN-sample/target/test/epics/test.log
+===================================================================[0m
+

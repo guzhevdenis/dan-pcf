@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+fileshare.mount=/codac
+ide.implementation=ITER CODAC
+idm.document=https\://user.iter.org/?uid\=${DocID}&version\=
+maven.api=true
+maven.verbose=false
+svn.url=https\://svnpub.iter.org/codac/iter/codac/icdev/units/

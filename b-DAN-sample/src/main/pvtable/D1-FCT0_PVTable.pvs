@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-FCT0:DUMMY-SIGNAL</name>
+</pv>
+</pvlist>
+</pvtable>

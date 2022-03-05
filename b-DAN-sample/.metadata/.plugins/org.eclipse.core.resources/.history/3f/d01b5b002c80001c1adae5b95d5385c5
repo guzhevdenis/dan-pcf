@@ -1,0 +1,138 @@
+/******************************************************************************
+* $HeadURL: https://svnpub.codac.iter.org/codac/iter/codac/dev/units/m-codac-unit-templates/branches/codac-core-6.3/templates/cpp-sdn/main/c++/prog/prog.cpp.template $
+* $Id: prog.cpp.template 116150 2021-01-04 09:45:04Z kimh19 $
+*
+* Project	: CODAC Core System
+*
+* Description	: MyFirstDANProgram program
+*
+* Author        : codac-dev
+*
+* Copyright (c) : 2010-2021 ITER Organization,
+*				  CS 90 046
+*				  13067 St. Paul-lez-Durance Cedex
+*				  France
+*
+* This file is part of ITER CODAC software.
+* For the terms and conditions of redistribution or use of this software
+* refer to the file ITER-LICENSE.TXT located in the top level directory
+* of the distribution package.
+******************************************************************************/
+
+/* Global header files */
+
+/* Local header files */
+
+/* sys-headers.h -- Part of the program template to host all OS-specific program header files */
+#include "sys-headers.h"
+
+/* ccs-headers.h -- Part of the program template to host all CCS-specific program header files */
+#include "ccs-headers.h"
+
+/* includetopics.h -- Created and maintained by SDD. It includes the list of header files for all the topics the application is participating to. */
+#include "includetopics.h" 
+
+/* topicvars.h -- Created and maintained by SDD. Contains the declaration of the application-specific topics and participants. */
+#include "topicvars.h" /* The file is optional and associated to the configureSDN, cleanupSDN helper functions which can be replaced by explicit class instantiation */
+
+#include "sdd-dan.h" /*contains all CSS DAN library API definition, etc. */
+//if you have extended the data block header for dan..., include the corresponding header
+
+#include "sdd-data.h" //this contains PV list
+//include "dan-if.h" /*DAN interface wrappers definition */
+
+
+using namespace std; 
+
+/* Constants */
+
+/* Type definition */
+
+/* Global variables */
+
+static bool __terminate = false;
+
+/* Function declaration */
+
+/* configure_sdn.cpp -- Created and maintained by SDD. It includes the definition of the application-specific objects and the registration of the topics and participants. */
+extern int configureSDN(); /* These functions are optional and can be replaced by bespoke code in case explicit object creation and registration of the participants to the appropriate topic name is favoured. */
+extern int cleanupSDN(); 
+
+/* Internal function definition */
+
+void signal_handler (int signal)
+{
+
+  log_info("Received signal '%d' to terminate", signal);
+  __terminate = true;
+
+};
+
+
+int main(int argc, char **argv)
+{
+	dan_DataCore dc; //Data Core reference
+	dan_Source ds; //Data Source reference
+	int x;
+	char* data;
+
+	//Initizalization of data core library
+	dc = dan_initLibrary(); // Init Library
+	if(dc == NULL) {
+		fprintf (stderr, "Error initializing DAN API library. Please,check that library has been properly configured using danApiTool.\n");
+		return 1;
+	}
+
+	// Initialization of data source "TEST1"
+	ds = dan_publisher_publishSource_withDAQBuffer (dc, "TEST1", 50000);
+	int sampleSize = 1000;
+	int n_channels = 3;
+	int DAQoffset = 1;
+	int result = 0;
+
+	//------------MANDATORY-------------
+
+	//this is the special configuration
+	SOURCE_STATIC_CONFIG static_config = {
+			"Test_Device",
+			"1.0Dev",
+			"ManufactureCode111222",
+			danItemInt16, //VERY IMPORTANT for plotter
+			0
+	};
+
+	//this function situated not here
+	//dan_publisher_setStreamMetadataSourceStatic(ds, &static_config);
+	// ----------------------------------
+
+	//**Init stream
+	dan_publisher_openStream (ds,10,20,0 );
+	while (1) {
+		// IF x samples AVAILABLE
+		// x = number_of_samples_available
+
+		//Copy to DAQBuffer. First to receive a chunk, then to copy
+		data = dan_publisher_reserveDAQBuffer (ds,
+				x*sampleSize*n_channels,
+				&DAQoffset,
+				&result);
+	}
+	if (result  < 0)
+	{
+		fprintf(stderr, "Buffer overflow if CHECK_AND_CANCEL or CHECK_AND_OVERWRITE policies");
+	}
+	dan_publisher_copyToDAQBuffer (ds, data, x*sampleSize*n_channels, DAQoffset);
+
+	//PUBLISH NEW DATA BLOCK REFERENCE
+	dan_publisher_putBlockReference (ds, counter++, x*sampleSize*n_channels, DAQoffset);
+
+	usleep (50000);
+
+	//CLOSE ALL STRUCTURES
+
+	dan_publisher_closeStream(ds);
+	dan_publisher_closeSource(dc,ds);
+	dan_closeLibrary(dc);
+
+	return 0;
+}

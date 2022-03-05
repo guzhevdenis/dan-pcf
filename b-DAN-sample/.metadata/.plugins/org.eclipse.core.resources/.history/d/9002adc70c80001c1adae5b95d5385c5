@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  DAN Configuration
+  Root: danApi
+  CODAC-VERSION: 6.3.1
+  WARNING: This is an automatically generated file. PLEASE DO NOT MODIFY.
+-->
+
+ <danApi >
+     <version >1.0.0</version>
+
+     <ICprogram name="MyFirstDANProgram" >
+         <source name="DummySrc" >
+             <itemDanType >danFloat</itemDanType>
+
+             <maxTransferRate >100000</maxTransferRate>
+
+             <advancedSource >
+                 <streamType >DATA_D0</streamType>
+
+                 <dataModel >DM_BLOCK2D_VAR</dataModel>
+
+                 <checkPolicy >CHECK_AND_OVERWRITE</checkPolicy>
+
+                 <queueSize >1000</queueSize>
+
+                 <profMonitoring >1</profMonitoring>
+
+                 <timeFormat >UTC</timeFormat>
+</advancedSource>
+
+             <deviceInfo >
+                 <deviceName >DummySrc</deviceName>
+
+                 <deviceVersion >v1.3</deviceVersion>
+
+                 <operationalMode >0</operationalMode>
+
+                 <manufactureCode >N1134342</manufactureCode>
+</deviceInfo>
+
+             <channelsInfo >
+                 <channel number="0" variable="D1-F000:DUMMY-SIGNAL" label="New DAN Variable" status="ENABLE" >
+                     <calibration sourceUnit="V" calibratedUnit="" calibrationType="raw" ></calibration>
+</channel>
+</channelsInfo>
+</source>
+
+         <danStreamer name="MyFirstDANProgram_STREAMER" >
+             <link >ALL</link>
+
+             <internal >
+                 <danInterface ></danInterface>
+
+                 <servers >
+                     <policy >IF_FAIL_NEXT</policy>
+
+                     <server >${DAN_ARCHIVE_MASTER}</server>
+
+                     <server >${DAN_ARCHIVE_SLAVE}</server>
+</servers>
+</internal>
+</danStreamer>
+</ICprogram>
+</danApi>
